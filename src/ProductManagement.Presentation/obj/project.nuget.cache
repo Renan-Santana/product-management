@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "0+2YSyvcyR0G1LCgzQG4xO3jgevvdFtGV6KDaFPIA3z0+emdsiriPefjfF7YjGQQi8wiKloPpzKzSlfWVkiThQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\renan-santana\\source\\repos\\Autoglass\\product-management\\src\\ProductManagement.Presentation\\ProductManagement.Presentation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\renan-santana\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\renan-santana\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\renan-santana\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\renan-santana\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\renan-santana\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\renan-santana\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
