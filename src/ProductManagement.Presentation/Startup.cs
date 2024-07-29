@@ -18,6 +18,7 @@ using ProductManagement.Domain.Interfaces.Services;
 using ProductManagement.Domain.Services;
 using ProductManagement.Infrastructure.Data;
 using ProductManagement.Infrastructure.Data.Repositories;
+using ProductManagement.Presentation.Middlewares;
 
 namespace ProductManagement.Presentation
 {
@@ -82,6 +83,8 @@ namespace ProductManagement.Presentation
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
