@@ -1,15 +1,15 @@
-﻿using ProductManagement.Domain.Entities;
-using ProductManagement.Domain.Interfaces.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using ProductManagement.Domain.Entities;
+using ProductManagement.Domain.Interfaces.Repositories;
 
 namespace ProductManagement.Infrastructure.Data.Repositories
 {
     public class BaseRepository<TEntity, TEntityId> : IBaseRepository<TEntity, TEntityId> where TEntity : EntityBase<TEntityId>
     {
-        private readonly ProductManagementContext _context;
+        protected readonly ProductManagementContext _context;
 
         public BaseRepository(ProductManagementContext context)
         {
