@@ -111,7 +111,7 @@ namespace ProductManagement.Application
 
                 return new()
                 {
-                    StatusCode = HttpStatusCode.Created,
+                    StatusCode = HttpStatusCode.NoContent,
                 };
             }
             catch (Exception e)
@@ -165,7 +165,7 @@ namespace ProductManagement.Application
 
                 var (products, totalProducts) = _productService.GetList(pageNumber, pageSize, CreateFilterExpression(productFilterRequestDto));
 
-                if (products is null || products.ToList().Count == 0)
+                if (products is null || products.Count() == 0)
                 {
                     return new()
                     {
