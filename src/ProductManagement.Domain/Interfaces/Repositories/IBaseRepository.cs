@@ -9,7 +9,6 @@ namespace ProductManagement.Domain.Interfaces.Repositories
     {
         void Insert(TEntity entity);
         void Update(TEntity entity);
-        void Delete(TEntityId id);
         TEntity GetById(TEntityId id);
         (IEnumerable<TEntity> pageRecords, int totalRecords) GetByFilter(Expression<Func<TEntity, bool>> predicate, int pageNumber, int pageSize);
         (IEnumerable<TEntity> pageRecords, int totalRecords) GetAll(int pageNumber, int pageSize);

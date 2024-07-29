@@ -44,21 +44,6 @@ namespace ProductManagement.Infrastructure.Data.Repositories
             }
         }
 
-        public void Delete(TEntityId id)
-        {
-            try
-            {
-                var entity = this.GetById(id);
-                _context.Set<TEntity>().Remove(entity);
-                _context.SaveChanges();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
         public TEntity GetById(TEntityId id)
         {
             return _context.Set<TEntity>().Find(id);

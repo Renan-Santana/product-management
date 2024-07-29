@@ -21,11 +21,6 @@ namespace ProductManagement.Domain.Services
             _productRepository.Insert(product);
         }
 
-        public void Remove(int id)
-        {
-            _productRepository.Delete(id);
-        }
-
         public void SoftDelete(Product product)
         {
             _productRepository.SoftDelete(product);
