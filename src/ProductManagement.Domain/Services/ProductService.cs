@@ -26,6 +26,11 @@ namespace ProductManagement.Domain.Services
             _productRepository.Delete(id);
         }
 
+        public void SoftDelete(Product product)
+        {
+            _productRepository.SoftDelete(product);
+        }
+
         public void Update(Product product)
         {
             _productRepository.Update(product);
@@ -33,15 +38,15 @@ namespace ProductManagement.Domain.Services
 
         public Product Get(int id)
         {
-            var product = _productRepository.GetById(id);
+            var product = _productRepository.GetByIdIncluding(id);
             return product;
         }
 
         public (IEnumerable<Product> pageProducts, int totalProducts) GetList(int pageNumber, int pageSize, Expression<Func<Product, bool>> predicate = null)
         {
             var (pageProducts, totalProducts) = predicate != null
-                ? _productRepository.GetByFilter(predicate, pageNumber, pageSize)
-                : _productRepository.GetAll(pageNumber, pageSize);
+                ? _productRepository.GetByFilterIncluding(predicate, pageNumber, pageSize)
+                : _productRepository.GetAllIncluding(pageNumber, pageSize);
 
             return (pageProducts, totalProducts);
         }

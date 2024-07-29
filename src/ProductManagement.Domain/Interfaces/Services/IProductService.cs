@@ -10,6 +10,7 @@ namespace ProductManagement.Domain.Interfaces.Services
         void Add(Product product);
         void Update(Product product);
         void Remove(int id);
+        void SoftDelete(Product product);
         Product Get(int id);
         (IEnumerable<Product> pageProducts, int totalProducts) GetList(int pageNumber, int pageSize, Expression<Func<Product, bool>>? predicate = null);
     }
