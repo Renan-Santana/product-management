@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using ProductManagement.Infrastructure.Data;
 
 namespace ProductManagement.Presentation
 {
@@ -25,6 +27,7 @@ namespace ProductManagement.Presentation
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProductManagement.Presentation", Version = "v1" });
             });
+            services.AddDbContext<ProductManagementContext>(options => options.UseSqlite(Configuration.GetConnectionString("SqliteConnectionString")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
