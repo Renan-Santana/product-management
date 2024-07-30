@@ -58,7 +58,7 @@ namespace ProductManagement.Test
         [Fact]
         public void Get_ShouldReturnNull_WhenProductDoesNotExist()
         {
-            A.CallTo(() => _productRepository.GetByIdIncluding(ProductMockFactory.productId)).Returns(null);
+            A.CallTo(() => _productRepository.GetByIdIncluding(ProductMockFactory.productId)).Returns(null as Product);
 
             var result = _productService.Get(ProductMockFactory.productId);
 
